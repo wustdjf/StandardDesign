@@ -25,7 +25,7 @@ export default defineConfig({
 		entryFile: './packages/standard-design/src/index.ts'
 	},
 	alias: {
-		'standard-design': path.join(__dirname, 'packages/standard-design/src')
+		'@djf/standard-design': path.join(__dirname, 'packages/standard-design/src')
 	},
 	styles: [siteStyle],
 	themeConfig: {
