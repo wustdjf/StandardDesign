@@ -1,0 +1,46 @@
+{
+	"name": "standard-design",
+	"version": "1.0.0",
+	"description": "基于React的UI组件库",
+	"license": "MIT",
+	"module": "./dist/es/index.js",
+	"main": "./dist/cjs/index.js",
+	"unpkg": "./dist/umd/index.js",
+	"types": "./dist/es/index.d.ts",
+	"authors": {
+		"name": "邓俊锋",
+		"email": "656578079@qq.com"
+	},
+	"keywords": [
+		"react",
+		"react18",
+		"reactComponent",
+		"component",
+		"components",
+		"ui",
+		"framework",
+		"frontend"
+	],
+	"scripts": {
+		"build": "rollup --bundleConfigAsCjs -c ./rollup.config.js"
+	},
+	"gitHooks": {
+		"pre-commit": "lint-staged"
+	},
+	"peerDependencies": {
+		"react": ">=16.9.0",
+		"react-dom": ">=16.9.0"
+	},
+	"dependencies": {
+		"@babel/plugin-transform-runtime": "^7.21.0",
+		"@babel/preset-react": "^7.18.6",
+		"react-is": "^18.2.0",
+		"styled-components": "^5.3.6"
+	},
+	"devDependencies": {
+		"@ant-design/icons": "^5.0.1",
+		"@types/react": "^18.0.27",
+		"@types/react-dom": "^18.0.10",
+		"react-transition-group": "^4.4.5"
+	}
+}

@@ -1,0 +1,90 @@
+{
+	"name": "standard-design",
+	"version": "1.0.0",
+	"description": "https://github.com/wustdjf/standard-design",
+	"module": "es/index.js",
+	"typings": "es/index.d.ts",
+	"scripts": {
+		"start": "cross-env PORT=3005 dumi dev",
+		"build:docs": "rimraf docs-dist && dumi build",
+		"eslint": "eslint packages/perfect-design/src --cache --fix --quiet --ext .js,.jsx,.ts,.tsx",
+		"pre-commit": "pretty-quick --staged && pnpm eslint && pnpm stylelint",
+		"stylelint": "stylelint {packages,.dumi/theme}/**/*.less --fix",
+		"preview": "cross-env PREVIEW=1 pnpm build:docs && cross-env PREVIEW=1 dumi preview",
+		"deploy": "rimraf node_modules/.cache/gh-pages && pnpm build:docs && gh-pages -d docs-dist"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"gitHooks": {
+		"pre-commit": "lint-staged"
+	},
+	"lint-staged": {
+		"*.{js,jsx,less,md,json}": [
+			"prettier --write"
+		],
+		"*.ts?(x)": [
+			"prettier --parser=typescript --write"
+		]
+	},
+	"devDependencies": {
+		"@babel/core": "^7.21.0",
+		"@babel/plugin-transform-runtime": "^7.21.0",
+		"@babel/preset-env": "^7.20.2",
+		"@commitlint/cli": "^17.4.2",
+		"@commitlint/config-conventional": "^17.4.2",
+		"@rollup/plugin-alias": "^4.0.3",
+		"@rollup/plugin-commonjs": "^23.0.4",
+		"@rollup/plugin-json": "^6.0.0",
+		"@rollup/plugin-node-resolve": "^15.0.1",
+		"@rollup/plugin-replace": "^5.0.2",
+		"@rollup/plugin-typescript": "^11.0.0",
+		"@types/react": "^18.0.27",
+		"@types/react-dom": "^18.0.10",
+		"@typescript-eslint/eslint-plugin": "^5.51.0",
+		"@typescript-eslint/parser": "^5.51.0",
+		"antd": "^5.2.0",
+		"commitlint": "^17.4.2",
+		"cross-env": "^7.0.3",
+		"dumi": "^2.1.9",
+		"eslint": "^8.33.0",
+		"eslint-config-prettier": "^8.6.0",
+		"eslint-plugin-prettier": "^4.2.1",
+		"eslint-plugin-react": "^7.32.2",
+		"gh-pages": "^5.0.0",
+		"husky": "^8.0.3",
+		"lint-staged": "^13.1.1",
+		"pnpm": "^7.27.0",
+		"postcss-less": "^6.0.0",
+		"prettier": "^2.8.4",
+		"pretty-quick": "^3.1.3",
+		"react": "^18.2.0",
+		"react-dom": "^18.2.0",
+		"react-transition-group": "^4.4.5",
+		"rimraf": "^4.1.2",
+		"rollup": "^3.17.2",
+		"rollup-plugin-babel": "^4.4.0",
+		"rollup-plugin-clear": "^2.0.7",
+		"rollup-plugin-copy": "^3.4.0",
+		"rollup-plugin-delete": "^2.0.0",
+		"rollup-plugin-eslint": "^7.0.0",
+		"rollup-plugin-less": "^1.1.3",
+		"rollup-plugin-postcss": "^4.0.2",
+		"rollup-plugin-terser": "^7.0.2",
+		"rollup-plugin-typescript2": "^0.34.1",
+		"rollup-plugin-uglify": "^6.0.4",
+		"server": "^1.0.38",
+		"stylelint": "^15.0.0",
+		"stylelint-config-prettier": "^9.0.4",
+		"stylelint-config-standard": "^30.0.1",
+		"typescript": "^4.9.5"
+	},
+	"peerDependencies": {
+		"react": ">=16.9.0",
+		"react-dom": ">=16.9.0"
+	},
+	"dependencies": {
+		"babel-plugin-styled-components": "^2.0.7",
+		"styled-components": "^5.3.6"
+	}
+}
