@@ -1,5 +1,5 @@
 import React from 'react'
-import { Alert } from 'standard-design'
+import { Alert } from '@djf/standard-design'
 
 export default function index() {
 	const margin = { margin: '15px 0' }

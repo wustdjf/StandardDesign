@@ -16,7 +16,7 @@ const readFile = (path: string) => {
 }
 
 const mkdir = (filePath: string) => {
-	mkdirp.sync(path.dirname(filePath))
+	mkdirp.mkdirpSync(path.dirname(filePath))
 }
 
 const write = (

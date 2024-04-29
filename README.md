@@ -1,6 +1,6 @@
 # React 组件库搭建
 
-[🚀 在线预览](https://github.com/wustdjf/standard-design)
+[🚀 在线预览](https://wustdjf.github.io/standard-design/)
 
 🚆 本地预览
 
@@ -11,5 +11,3 @@ cd standard-design
 pnpm install
 pnpm start
 ```
-
-

@@ -1,5 +1,5 @@
 {
-	"name": "standard-design",
+	"name": "@djf/standard-design",
 	"version": "1.0.0",
 	"description": "基于React的UI组件库",
 	"license": "MIT",
@@ -24,6 +24,9 @@
 	"scripts": {
 		"build": "rollup --bundleConfigAsCjs -c ./rollup.config.js"
 	},
+	"files": [
+		"dist"
+	],
 	"gitHooks": {
 		"pre-commit": "lint-staged"
 	},

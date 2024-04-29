@@ -1,5 +1,6 @@
 {
-	"name": "standard-design",
+	"private": false,
+	"name": "standard-component",
 	"version": "1.0.0",
 	"description": "https://github.com/wustdjf/standard-design",
 	"module": "es/index.js",
@@ -7,15 +8,26 @@
 	"scripts": {
 		"start": "cross-env PORT=3005 dumi dev",
 		"build:docs": "rimraf docs-dist && dumi build",
+		"build": "pnpm --filter=@djf/* run build",
 		"eslint": "eslint packages/perfect-design/src --cache --fix --quiet --ext .js,.jsx,.ts,.tsx",
 		"pre-commit": "pretty-quick --staged && pnpm eslint && pnpm stylelint",
 		"stylelint": "stylelint {packages,.dumi/theme}/**/*.less --fix",
 		"preview": "cross-env PREVIEW=1 pnpm build:docs && cross-env PREVIEW=1 dumi preview",
 		"deploy": "rimraf node_modules/.cache/gh-pages && pnpm build:docs && gh-pages -d docs-dist"
 	},
-	"keywords": [],
-	"author": "",
+	"keywords": [
+		"React",
+		"Component"
+	],
+	"author": "邓俊锋",
 	"license": "ISC",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/wustdjf/standard-design.git"
+	},
+	"files": [
+		"docs-dist"
+	],
 	"gitHooks": {
 		"pre-commit": "lint-staged"
 	},
