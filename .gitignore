@@ -6,6 +6,8 @@ coverage
 # Editor directories and files
 .idea
 .vscode
+.DS_Store
+.eslintcache
 
 # dependencies
 node_modules
